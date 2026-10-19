@@ -1,0 +1,112 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+export const az = {
+  header: {
+    backToPackages: 'Paketlərə qayıt',
+    title: 'Ödəniş',
+    subtitle: 'Paket abunəliyinizi tamamlayın',
+    steps: {
+      select: 'Paket seçimi',
+      checkout: 'Ödəniş',
+      finish: 'Hazır',
+    },
+  },
+  period: {
+    monthly: 'Aylıq',
+    yearly: 'İllik',
+    savePercent: (pct: string | number) => `−${pct}%`,
+    monthlyEquivalent: (amount: string) => `≈ ${amount} / ay`,
+  },
+  packageCard: {
+    popularBadge: 'Ən çox seçilən',
+    included: 'Daxildir',
+    notIncluded: 'Daxil deyil',
+    showAll: (count: number) => `Bütün xüsusiyyətləri göstər (${count})`,
+    showLess: 'Daha az göstər',
+  },
+  paymentMethod: {
+    title: 'Ödəniş üsulu',
+    walletTitle: 'Panshop Cüzdanı',
+    walletDesc: 'Təhlükəsiz daxili balans ilə dərhal aktivləşmə',
+    currentBalance: 'Cüzdan balansı',
+    insufficientWarning: 'Balansınız kifayət etmir. Balans artırıb yenidən cəhd edin.',
+    topUpBalance: 'Balans artır',
+    cardTitle: 'Bank kartı ilə ödəniş',
+    cardDesc: 'Visa, Mastercard, Birbank',
+    cardSoonBadge: 'Tezliklə',
+    cardUnavailable: 'Kart ödənişi hazırda aktiv deyil. Ödəniş yalnız təhlükəsiz cüzdan balansı ilə mümkündür.',
+  },
+  coupon: {
+    title: 'Promokod / Kupon',
+    placeholder: 'Kupon kodunu daxil edin (məs: PANSHOP10)',
+    applyButton: 'Tətbiq et',
+    checking: 'Yoxlanır...',
+    remove: 'Sil',
+    appliedSuccess: (code: string, discount: string) => `${code} · ${discount} endirim tətbiq edildi`,
+    invalidError: 'Kupon kodu tapılmadı və ya etibarsızlıq müddəti bitib.',
+    quickSuggestions: 'Sınaq kuponları:',
+  },
+  summary: {
+    title: 'Sifariş xülasəsi',
+    packageRow: 'Paket',
+    periodRow: 'Abunəlik dövrü',
+    basePrice: 'Baza qiymət',
+    couponDiscount: (code: string) => `Kupon endirimi (${code})`,
+    switchCredit: (fromPackage: string, days: number) =>
+      `Köhnə «${fromPackage}» paketindən qalan ${days} gün`,
+    refundNote: (amount: string) => `Qalan ${amount} cüzdan balansınıza qaytarılacaq`,
+    totalToPay: 'Yekun ödəniləcək məbləğ',
+    freeAmount: '0,00 ₼ (Kreditlə örtüldü)',
+    autoRenewNote: (date: string) =>
+      `Abunəlik avtomatik yenilənir: növbəti ödəniş ${date} tarixində cüzdandan çıxılacaq. İstənilən vaxt ləğv edə bilərsiniz.`,
+    securePayment: 'Təhlükəsiz ödəniş · Panshop zəmanəti',
+    payButton: (amount: string) => `Ödənişi tamamla · ${amount}`,
+    processing: 'Emal olunur...',
+  },
+  downgrade: {
+    title: 'Diqqət: məzmununuz bağlanacaq',
+    message: (active: number, willDeactivate: number) =>
+      `Bu paketə keçsəniz ${active} məhsulunuzdan ${willDeactivate}-i fiziki satışdan çıxarılacaq.`,
+    hint: 'Ən köhnə məzmununuz saxlanılır; bağlananları paneldən yenidən aça bilərsiniz.',
+    checkboxConfirm: 'Başa düşdüm, davam et',
+  },
+  success: {
+    title: 'Abunəlik başladı!',
+    modalTitle: 'Ödəniş uğurla tamamlandı!',
+    subtitle: 'Paketiniz uğurla aktivləşdirildi və mağazanıza tətbiq edildi.',
+    packageSummary: 'Seçilmiş paket',
+    totalPaid: 'Ödənilən yekun məbləğ',
+    paymentMethod: 'Ödəniş üsulu',
+    walletPaid: 'Panshop Cüzdanı',
+    newBalance: 'Yeni cüzdan balansı',
+    nextBillingDate: 'Növbəti yenilənmə tarixi',
+    transactionId: 'Əməliyyat ID',
+    actionDashboard: 'Abunəlikləri idarə et',
+    actionBackToSubscriptions: 'Abunəliklər siyahısına qayıt',
+    actionStay: 'Yeni əməliyyat et',
+    close: 'Bağla',
+  },
+  errors: {
+    authTitle: 'Daxil olma tələb olunur',
+    authMessage: 'Zəhmət olmasa əvvəlcə daxil olun. 2 saniyə ərzində yönləndirilirsiniz...',
+    notFoundTitle: 'Paket tapılmadı',
+    notFoundMessage: 'Seçilmiş abunəlik paketi mövcud deyil və ya ləğv olunub.',
+    backToPackages: 'Paketlərə qayıt',
+    tryAgain: 'Yenidən yoxla',
+    genericTitle: 'Xəta baş verdi',
+  },
+  dev: {
+    scenarios: 'Test Ssenariləri (Dev)',
+    scenario_new: 'Yeni abunə (Balans kifayət edir, illik)',
+    scenario_switch: 'Paket dəyişmə (Köhnə paketdən kredit)',
+    scenario_coupon: 'Kupon tətbiq olunub (PANSHOP10 %10)',
+    scenario_low_balance: 'Balans çatmır (85,40 ₼)',
+    scenario_downgrade: 'Aşağı paketə keçid (Downgrade təsiri)',
+    scenario_credit_exceeds: 'Kredit qiymətdən çoxdur (Artıq məbləğ balansa)',
+    scenario_not_found: 'Paket tapılmadı (404 xəta)',
+    scenario_unauthorized: 'Giriş edilməyib (Auth 401)',
+  },
+};

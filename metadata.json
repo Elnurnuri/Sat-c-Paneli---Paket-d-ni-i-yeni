@@ -1,0 +1,8 @@
+{
+  "name": "Panshop Satıcı Paneli - Paket Ödənişi yeni",
+  "description": "Panshop Azərbaycan marketplace satıcı və şirkət paneli üçün paket abunəliyi ödəniş səhifəsi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
